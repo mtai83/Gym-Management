@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../assets/css/styles1.css">
+</head>
+<body>
+    <div class="container">
+        <span><a href="../index.php"><img src="../assets/img/Logo.png" alt="logo" class="logo"></a></span>
+        <h1>Đăng nhập</h1>
+        <main>       
+            <form action="../pages/login.php" method="POST">
+                <div class="row">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username-input" maxlength="30" placeholder="Mời nhập Username">
+                </div>
+                <div class="row">
+                    <label for="passwd">Password: </label>
+                    <input type="password" id="passwd" name="passwd-input" maxlength="50" placeholder="Mời nhập Password">
+                </div>
+                
+                <button type="submit" id="btn-submit">Enter</button>
+            </form>
+            <a href="../pages/SignUp.html">
+                <button>Sign Up</button>
+            </a>
+        </main>
+    </div>
+</body>
+</html>

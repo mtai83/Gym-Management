@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+}
+
+body {
+    height: 100vh;
+    background: rgb(34,193,195);
+    background: linear-gradient(72deg, rgb(13, 183, 84) 11%, rgb(203, 255, 107) 90%);
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+
+.container {
+    width: 40%;
+    max-width: calc(100% - 48px);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    padding-bottom: 50px;
+    border-radius: 10px;
+    background: rgb(32, 32, 32);
+    color: white;
+}
+
+.logo{
+    width: 120px;
+    height: 130px;
+    object-fit: cover;
+}
+
+h1 {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 0;
+    font-size: 22px;
+}
+
+.row {
+    margin: 50px 30px;
+}
+
+.row label { 
+    display: inline-block;
+    width: 140px;
+
+}
+
+.row input {
+    width: 350px;
+    height: 25px;
+}
+
+button {
+    display: block;
+    width: 250px;
+    margin: 10px auto ;
+    padding: 15px 25px;
+    border-radius: 15px;
+    font-size: 16px;
+    background: rgb(34,193,195);
+    color: rgb(236, 227, 245);
+    cursor: pointer;
+}
+
+a {
+    text-align: center;
+    text-decoration: none;
+}

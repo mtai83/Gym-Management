@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="../assets/css/styles2.css">
+</head>
+<body>
+    <div class="container">
+        <span><a href="../index.php"><img src="../assets/img/Logo.png" alt="logo" class="logo"></a></span>
+        <h1>Đăng Ký</h1>
+        <main>       
+            <form action="signup.php" method="POST">
+                <div class="row">
+                    <label for="username">Username: </label>
+                    <input type="text" id="username" name="username-input" maxlength="30" placeholder="Mời nhập Username" required>
+                </div>
+                <div class="row">
+                    <label for="sdt">Phone: </label>
+                    <input type="number" id="sdt" name="sdt-input" maxlength="30" placeholder="Mời nhập số điện thoại" required>
+                </div>
+                <div class="row">
+                    <label for="passwd">Password: </label>
+                    <input type="password" id="passwd" name="passwd-input" maxlength="50" placeholder="Mời nhập Password" required>
+                </div>
+                <div class="row">
+                    <label for="re-passwd">Confirm Password: </label>
+                    <input type="password" id="re-passwd" name="re-passwd" maxlength="50" placeholder="Mời nhập lại Password" required>
+                </div>
+                
+                <button type="submit" id="btn-submit">Enter</button>
+            </form>
+            <a href="../pages/login.html">
+                <button type="button">Log in</button>
+            </a>
+        </main>
+    </div>
+</body>
+</html>
