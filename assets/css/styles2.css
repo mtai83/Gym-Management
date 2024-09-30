@@ -5,7 +5,7 @@
 body {
     height: 100vh;
     background: rgb(34,193,195);
-    background: linear-gradient(72deg, rgb(13, 183, 84) 11%, rgb(203, 255, 107) 90%);
+    background: linear-gradient(150deg, rgba(34,193,195,1) 11%, rgba(187,244,78,1) 90%);
     font-family: sans-serif;
     overflow: hidden;
 }

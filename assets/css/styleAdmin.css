@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #222222;
+}
+
+a {
+    color: white;
+}
+
+h1 {
+    margin: 20px 0 30px;
+    display: flex;
+    justify-content: center;
+}
+
+h2 {
+    margin: 15px 0 ;
+    color: red;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table, th, td {
+    border: 1px solid rgb(80, 80, 80);
+}
+
+table th {
+    padding: 20px 0;
+    color: black;
+    background-color: burlywood;
+}
+
+table td {
+    padding: 10px 0;
+}
+
+form label {
+    display: inline-block;
+    width: 175px;
+    margin: 5px;
+}
+
+aside {
+    background-color: rgba(0, 0, 0, 0.1);
+    width: 17%;
+    height: 100vh;
+}
+
+aside h2 {
+    width: fit-content;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+aside ul li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+
+aside ul li:hover {
+    background-color: rgba(103, 203, 170, 0.7);
+}
+
+aside a {
+    padding: 15px 22%;
+    color: rgb(28, 7, 220);
+}

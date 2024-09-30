@@ -35,7 +35,7 @@
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['role'] = $row['role'];
 
-                header("Location: ../index.php");
+                header("Location: ../pages/admin.html");
                 exit;
 
             } else {

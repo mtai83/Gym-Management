@@ -19,6 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $phone = $_POST['sdt-input'];
     $password = $_POST['passwd-input'];
     $confirm_password = $_POST['re-passwd'];
+    $role = "user";
 
     // Kiểm tra mật khẩu có khớp hay không
     if ($password !== $confirm_password) {
@@ -28,10 +29,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
         // Chuẩn bị câu lệnh SQL để chèn dữ liệu
-        $sql = "INSERT INTO Users (username, sdt, password) VALUES (?, ?, ?)";
+        $sql = "INSERT INTO Users (username, sdt, password, role) VALUES (?, ?, ?, ?)";
         // Sử dụng prepared statement để tránh SQL Injection
         $stmt = $conn->prepare($sql);
-        $stmt->bind_param("sss", $username, $phone, $hashed_password);
+        $stmt->bind_param("ssss", $username, $phone, $hashed_password, $role);
         $error = $conn->error;
         // Thực thi và kiểm tra
         if ($stmt->execute()) {
