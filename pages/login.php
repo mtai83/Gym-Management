@@ -21,7 +21,7 @@
         $password = $_POST['passwd-input'];
 
      
-        $sql = "SELECT username, password FROM Users WHERE username = ?";
+        $sql = "SELECT username, password, role, ID FROM Users WHERE username = ?";
 
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("s", $username);
@@ -32,12 +32,19 @@
             $row = $result->fetch_assoc();
 
             if(password_verify($password, $row['password'])){
+                $_SESSION['ID'] = $row['ID'];
                 $_SESSION['username'] = $row['username'];
                 $_SESSION['role'] = $row['role'];
 
-                header("Location: ../pages/admin.html");
-                exit;
-
+                if ($row['role'] == 'admin') {
+                    // Chuyển hướng đến trang admin
+                    header("Location: ../pages/admin.php");
+                    exit();
+                } elseif ($row['role']  == 'user') {
+                    // Chuyển hướng đến trang user
+                    header("Location: ../pages/user.php");
+                    exit();
+                }
             } else {
                 echo "<script>alert('Sai mật khẩu'); window.location.href = '../pages/login.html';</script>";
             }

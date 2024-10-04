@@ -1,3 +1,15 @@
+<?php
+session_start();
+
+// Kiểm tra xem người dùng đã đăng nhập và có vai trò admin chưa
+if (!isset($_SESSION['username']) || $_SESSION['role'] != 'admin') {
+    // Nếu không phải admin, chuyển hướng về trang đăng nhập
+    header("Location: login.html");
+    exit();
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +29,9 @@
             <li><a href="#!">Xem doanh thu</a></li>
         </ul>  
         
-        <a href="../index.php">
-            <button class="btn">Log out</button>
-        </a>
+       <form action="./clear_session.php" method="POST">
+            <button type="submit" class="btn">Log out</button>
+       </form>
     </aside>
 
 </body>

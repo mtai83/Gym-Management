@@ -3,10 +3,10 @@
     session_start();
 
     // Kiểm tra người dùng đã đăng nhập chưa (giả sử bạn lưu session khi đăng nhập)
-    // if (!isset($_SESSION['username'])) {
-    //     header("Location: login.php");
-    //     exit;
-    // }
+    if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
+        header("Location: ./login.html");
+        exit;
+    }else
 
     //Kết nối tới csdl
     $servername = "localhost";
@@ -59,7 +59,7 @@
     </head>
     <body>
         <div class="container">
-        <a href="admin.html">➦ Back to Dashboard</a>
+        <a href="admin.php">➦ Back to Dashboard</a>
         <h1>Quản lý gói tập</h1>
         <h2>Thêm gói tập mới</h2>
     <!-- Thêm gói tập -->
@@ -70,11 +70,11 @@
             </div>
             <div class="row">
                 <label for="packagePrice">Giá gói tập</label>
-                <input type="number" id="packagePrice" name="packagePrice" require>
+                <input type="number" min="0" id="packagePrice" name="packagePrice" require>
             </div>
             <div class="row">
                 <label for="packageTime">Thời gian gói tập (Ngày)</label>
-                <input type="number" id="packageTime" name="packageTime" require>
+                <input type="number" min="1" id="packageTime" name="packageTime" require>
             </div>
             <button type="submit" name="add_package" class="btn">Thêm gói tập</button>
         </form>

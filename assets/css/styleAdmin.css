@@ -23,6 +23,7 @@ h2 {
 }
 
 table {
+    margin: 10px 0 25px;
     border-collapse: collapse;
     width: 100%;
 }

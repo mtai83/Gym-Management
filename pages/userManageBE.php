@@ -2,11 +2,11 @@
 // Bắt đầu session để kiểm tra người dùng đã đăng nhập hay chưa
 session_start();
 
-// Kiểm tra người dùng đã đăng nhập chưa (giả sử bạn lưu session khi đăng nhập)
-// if (!isset($_SESSION['username'])) {
-//     header("Location: login.php");
-//     exit;
-// }
+  // Kiểm tra người dùng đã đăng nhập chưa (giả sử bạn lưu session khi đăng nhập)
+  if (!isset($_SESSION['username']) || $_SESSION['role'] !== 'admin') {
+    header("Location: ./login.html");
+    exit;
+}else
 
 // Kết nối tới cơ sở dữ liệu
 $servername = "localhost";
@@ -76,7 +76,7 @@ $conn->close();
 </head>
 <body>
     <div class="container">
-        <a href="admin.html">➦ Back to Dashboard</a>
+        <a href="admin.php">➦ Back to Dashboard</a>
         <h1>Quản lý người dùng</h1>
         <h2>Thêm người dùng mới</h2>
         <!-- Form thêm người dùng mới -->
