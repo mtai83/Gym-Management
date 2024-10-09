@@ -5,6 +5,9 @@
   php -S localhost:5500
 
 3. Mở trang web: http://localhost:5500/
+![image](https://github.com/user-attachments/assets/c3f056d1-1314-4cbc-856f-75e56d77b88d)
+
+
 
 # Usage
   Dành cho Người quản trị (ADMIN):
